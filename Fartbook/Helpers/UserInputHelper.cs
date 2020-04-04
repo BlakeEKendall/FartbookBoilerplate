@@ -49,6 +49,12 @@ namespace Fartbook
             newFartType.FartTypeID = randomNumberGenerator.Next(0, 10000000);
             return newFartType;
         }
+        public string GetTitleOfFartTypeToDelete()
+        {
+            Console.WriteLine("What is the title of this fart type?");
+            string title = Console.ReadLine();
+            return title;
+        }
         public void DisplayPopularFartTypes(List<FartType> fartTypes)
         {
             foreach (FartType fartType in fartTypes)

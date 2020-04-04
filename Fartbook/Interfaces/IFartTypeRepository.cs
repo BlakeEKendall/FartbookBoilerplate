@@ -9,5 +9,7 @@ namespace Fartbook.Interfaces
     {
         void CreateFartType(FartType fartTypeToCreate);
         List<FartType> GetMostPopularFartTypes();
+
+        void DeleteFartType(string titleToDelete);
     }
 }
