@@ -29,7 +29,7 @@ namespace Fartbook
                                 "5: Exit\n" +
                                 "6: Create a fart type\n" +
                                 "7: See most popular fart types\n" +
-                                "8: Delete a fart type");
+                                "8: Delete a fart type by title");
                 string userInput = Console.ReadLine();
                 switch (Convert.ToInt32(userInput))
                 {
