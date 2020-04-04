@@ -18,5 +18,16 @@ namespace Fartbook
         {
             return _fartTypes.OrderByDescending(fartType => fartType.Count).ToList();
         }
+
+        public void DeleteFartType(string titleToDelete)
+        {
+            foreach(FartType type in _fartTypes) {
+                if (type.Title == titleToDelete)
+                {
+                    _fartTypes.Remove(type);
+                    return;
+                }
+            }
+        }
     }
 }

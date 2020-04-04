@@ -28,7 +28,8 @@ namespace Fartbook
                                 "4: Delete a fart\n" +
                                 "5: Exit\n" +
                                 "6: Create a fart type\n" +
-                                "7: See most popular fart types");
+                                "7: See most popular fart types\n" +
+                                "8: Delete a fart type");
                 string userInput = Console.ReadLine();
                 switch (Convert.ToInt32(userInput))
                 {
@@ -82,6 +83,11 @@ namespace Fartbook
                     case 7:
                         _userInputHelper = new UserInputHelper();
                         _userInputHelper.DisplayPopularFartTypes(_fartTypeRepository.GetMostPopularFartTypes());
+                        break;
+                    case 8:
+                        _userInputHelper = new UserInputHelper();
+                        String titleToDelete = _userInputHelper.GetTitleOfFartTypeToDelete();
+                        _fartTypeRepository.DeleteFartType(titleToDelete);
                         break;
                 }
             }
